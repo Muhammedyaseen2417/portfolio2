@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f8f0f5;
+    color: #333;
+}
+
+/* Centered Page Title */
+.page-title {
+    text-align: center;
+    font-size: 3rem; /* Larger font size */
+    margin-top: 2rem; /* Space from top */
+    color: #00adb5;
+    text-transform: uppercase; /* Make title bold and stylized */
+    letter-spacing: 2px; /* Add space between letters */
+}
+
+/* Projects Section */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+/* Project Card Style */
+.project {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    height: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensures background does not overflow card edges */
+}
+
+/* Project Title */
+.project h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+/* Project Links */
+.project a {
+    color: #00adb5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Project Description */
+.project p {
+    font-size: 1.1rem;
+    font-weight: lighter;
+}
+
+/* Hover Effects */
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Overlay Effect for Projects */
+.project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    border-radius: 10px;
+    z-index: 1;
+}
+
+/* Content on top of overlay */
+.project > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        height: 250px;
+    }
+}
+

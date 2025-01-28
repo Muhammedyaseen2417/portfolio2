@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="../static/projects.css">
+<!-- Page Title centered at the top -->
+<h1 class="page-title">My Projects</h1>
+
+<!-- Projects Section -->
+<div class="projects">
+    <div class="project" style="background-image: url('../static/images/1690187129100.jpg');">
+        <h2><a href="https://yasin2417.pythonanywhere.com/" target="_blank">Project 1</a></h2>
+        <p>A brief description of Project 1. <a href="https://yasin2417.pythonanywhere.com/" target="_blank">Check it out</a>.</p>
+    </div>
+    <div class="project" style="background-image: url('../static/images/1690187129100.jpg');">
+        <h2><a href="https://link-to-project2.com" target="_blank">Project 2</a></h2>
+        <p>A brief description of Project 2. <a href="https://link-to-project2.com" target="_blank">Check it out</a>.</p>
+    </div>
+    <div class="project" style="background-image: url('../static/images/1690187129100.jpg');">
+        <h2><a href="https://link-to-project3.com" target="_blank">Project 3</a></h2>
+        <p>A brief description of Project 3. <a href="https://link-to-project3.com" target="_blank">Check it out</a>.</p>
+    </div>
+</div>
+{% endblock %}
