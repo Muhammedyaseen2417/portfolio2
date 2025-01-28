@@ -1,120 +1,175 @@
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
     box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
 }
 
 /* Hero Section */
 .hero-section {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    height: 100vh;
-    background: linear-gradient(to right, #00adb5, #393e46);
-    color: #fff;
+    align-items: center;
     text-align: center;
-    padding: 50px;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 4rem 1rem;
+    min-height: 100vh;
 }
 
-/* Hero Content */
 .hero-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
 }
 
-/* Profile Picture */
 .profile-pic {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #00adb5;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1rem;
 }
 
-.profile-pic:hover {
-    transform: scale(1.1);
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-}
-
-/* Hero Text */
 .hero-text h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    animation: fadeInUp 1s ease-out;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .hero-text p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    animation: fadeInUp 1.2s ease-out;
-}
-
-/* Call to Action (CTA) */
-.cta {
-    animation: fadeInUp 1.4s ease-out;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 12px 30px;
     font-size: 1.2rem;
-    color: #fff;
-    background-color: #00adb5;
-    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+/* .cta .cta-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #fff;
+    color: #007BFF;
     text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+} */
+
+.cta .cta-button:hover {
+    background-color: #e6e6e6;
+    transform: translateY(-2px);
 }
 
-.cta-button:hover {
-    background-color: #393e46;
-    transform: translateY(-5px);
+/* Highlight Section */
+.highlight-section {
+    background-color: #ffffff;
+    color: #333;
+    padding: 4rem 1rem;
+    text-align: center;
+    min-height: 80vh;
 }
 
-/* Animation Effects */
-@keyframes fadeInUp {
+.highlight-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.highlight-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.highlight-content .cta-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.highlight-content .cta-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
     0% {
         opacity: 0;
-        transform: translateY(30px);
     }
     100% {
         opacity: 1;
-        transform: translateY(0);
     }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.animate-slide-up {
+    animation: slideUp 1s ease-in-out;
+}
+
+.animate-slide-left {
+    animation: slideLeft 1s ease-in-out;
+}
+
+.animate-scale-up {
+    animation: scaleUp 1s ease-in-out;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero-section {
-        padding: 30px;
-    }
-
     .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
-    .hero-text p {
-        font-size: 1.2rem;
-    }
-
-    .profile-pic {
-        width: 180px;
-        height: 180px;
-    }
-
-    .cta-button {
-        font-size: 1rem;
+    .highlight-content h2 {
+        font-size: 2rem;
     }
 }
+
+
 

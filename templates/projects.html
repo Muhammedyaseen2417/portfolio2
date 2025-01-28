@@ -1,25 +1,47 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="../static/projects.css">
+</head>
 
-{% block title %}Projects{% endblock %}
+<body>
+    {% extends "base.html" %}
 
-{% block content %}
-<link rel="stylesheet" href="../static/projects.css">
-<!-- Page Title centered at the top -->
-<h1 class="page-title">My Projects</h1>
+    {% block title %}Projects{% endblock %}
 
-<!-- Projects Section -->
-<div class="projects">
-    <div class="project" style="background-image: url('../static/images/1690187129100.jpg');">
-        <h2><a href="https://yasin2417.pythonanywhere.com/" target="_blank">Project 1</a></h2>
-        <p>A brief description of Project 1. <a href="https://yasin2417.pythonanywhere.com/" target="_blank">Check it out</a>.</p>
+    {% block content %}
+    <!-- Page Header Section -->
+    <div class="page-header">
+        <h1 class="page-title">MY PROJECTS</h1>
+        <p class="intro-text">Explore the projects I've worked on. Click to see more!</p>
     </div>
-    <div class="project" style="background-image: url('../static/images/1690187129100.jpg');">
-        <h2><a href="https://link-to-project2.com" target="_blank">Project 2</a></h2>
-        <p>A brief description of Project 2. <a href="https://link-to-project2.com" target="_blank">Check it out</a>.</p>
+
+    <!-- Projects Section -->
+    <div class="projects-horizontal">
+        <div class="project" style="background-image: url('../static/images/concept-online-shopping-on-social-260nw-1769713256.webp');">
+            <h2><a href="https://yasin2417.pythonanywhere.com/" target="_blank">i-Store</a></h2>
+            <p><a href="https://yasin2417.pythonanywhere.com/" target="_blank"></a>.</p>
+        </div>
+        <div class="project" style="background-image: url('../static/images/Apple_announce-iphone12pro_10132020_big.jpg.large.jpg');">
+            <h2><a href="https://link-to-project2.com" target="_blank">Project 2</a></h2>
+            <p><a href="https://link-to-project2.com" target="_blank"></a></p>
+        </div>
+        <div class="project" style="background-image: url('../static/images/IN-BLOG-e-commerce-shopping-retail.webp');">
+            <h2><a href="https://link-to-project3.com" target="_blank">Project 3</a></h2>
+            <p><a href="https://link-to-project3.com" target="_blank"></a></p>
+        </div>
     </div>
-    <div class="project" style="background-image: url('../static/images/1690187129100.jpg');">
-        <h2><a href="https://link-to-project3.com" target="_blank">Project 3</a></h2>
-        <p>A brief description of Project 3. <a href="https://link-to-project3.com" target="_blank">Check it out</a>.</p>
+
+    <!-- Home Button -->
+    <div class="home-button">
+        <a href="/" class="home-link">Home</a>
     </div>
-</div>
-{% endblock %}
+    {% endblock %}
+</body>
+</html>
+
+
+

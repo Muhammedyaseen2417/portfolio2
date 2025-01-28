@@ -1,100 +1,130 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background-color: #f8f0f5;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
     color: #333;
+    padding: 0;
+    margin: 0;
 }
 
-/* Centered Page Title */
-.page-title {
+/* Page Header */
+.page-header {
     text-align: center;
-    font-size: 3rem; /* Larger font size */
-    margin-top: 2rem; /* Space from top */
-    color: #00adb5;
-    text-transform: uppercase; /* Make title bold and stylized */
-    letter-spacing: 2px; /* Add space between letters */
-}
-
-/* Projects Section */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-    margin: 0 auto;
-}
-
-/* Project Card Style */
-.project {
-    background-size: cover;
-    background-position: center;
+    padding: 4rem 1rem; /* Top padding for spacing */
+    background-color: #007BFF; /* Blue background */
     color: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    position: relative;
-    height: 300px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; /* Ensures background does not overflow card edges */
-}
-
-/* Project Title */
-.project h2 {
-    font-size: 1.8rem;
-    color: #ffffff;
-    margin-bottom: 1rem;
-}
-
-/* Project Links */
-.project a {
-    color: #00adb5;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Project Description */
-.project p {
-    font-size: 1.1rem;
-    font-weight: lighter;
-}
-
-/* Hover Effects */
-.project:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-}
-
-/* Overlay Effect for Projects */
-.project::before {
-    content: '';
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-    border-radius: 10px;
-    z-index: 1;
+    z-index: 1000; /* Ensures header stays above other content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
 }
 
-/* Content on top of overlay */
-.project > * {
+.page-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+/* Projects Section - Horizontal Layout */
+.projects-horizontal {
+    display: flex;
+    gap: 2rem;
+    padding: 5rem 2rem 2rem; /* Padding adjusted for better spacing under the header */
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 4rem; /* Adds spacing below the header */
+}
+
+.project {
+    flex: 0 0 30%;
+    min-width: 280px;
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    color: white;
+    border-radius: 10px;
     position: relative;
-    z-index: 2;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.project h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.project h2 a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.project p a {
+    color: #ffdd57;
+    text-decoration: underline;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project:hover h2 a {
+    color: #ffdd57;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .projects {
-        grid-template-columns: 1fr;
+    .projects-horizontal {
+        flex-direction: column;
+        align-items: center;
     }
 
     .project {
-        height: 250px;
+        flex: 0 0 80%;
     }
+}
+/* Center the home button at the bottom */
+.home-button {
+    position: fixed;
+    bottom: 20px; /* Space from the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.home-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1669d6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.home-link:hover {
+    background-color: #4a10d1;
 }
 

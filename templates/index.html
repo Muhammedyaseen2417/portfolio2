@@ -4,19 +4,36 @@
 
 {% block content %}
 <link rel="stylesheet" href="../static/index.css">
+
+<!-- Hero Section -->
 <div class="hero-section">
     <div class="hero-content">
-        <img src="../static/images/1690187129100.jpg" alt="Profile Picture" class="profile-pic">
+        <img src="../static/images/WhatsApp Image 2025-01-28 at 6.04.57 PM.jpeg" alt="Profile Picture" class="profile-pic animate-fade-in">
         <div class="hero-text">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Hi, I'm <strong>Muhammed Yaseen</strong>, a passionate <strong>Python Developer</strong>.</p>
-            <p>Explore my projects and learn more about me!</p>
+            <h1 class="animate-slide-up">Welcome to My Portfolio</h1>
+            <p class="animate-slide-up">Hi, I'm <strong>Muhammed Yaseen</strong>, a passionate <strong>Python Developer</strong>.</p>
+            <p class="animate-slide-up">Explore my projects and learn more about me!</p>
         </div>
     </div>
     <div class="cta">
-        <a href="/projects" class="cta-button">Check My Projects</a>
+        <a href="/projects" class="cta-button animate-scale-up"></a>
+    </div>
+</div>
+
+<!-- New Animated Section -->
+<div class="highlight-section">
+    <div class="highlight-content">
+        <h2 class="animate-slide-left">Discover My Work</h2>
+        <p class="animate-fade-in">
+            I specialize in creating efficient and scalable software solutions. Check out my projects to see how I’ve combined creativity and technology to build impactful solutions.
+        </p>
+        <a href="/projects" class="cta-button animate-scale-up">Explore Projects</a>
     </div>
 </div>
 {% endblock %}
+
+
+
+
 
 
