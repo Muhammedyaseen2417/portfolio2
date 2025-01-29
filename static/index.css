@@ -34,12 +34,13 @@ body {
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 400px;  /* Increased from 150px */
+    height: 400px; /* Increased from 150px */
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
 }
+
 
 .hero-text h1 {
     font-size: 2.5rem;
