@@ -9,18 +9,21 @@
 /* Profile Section Animation */
 .profile-section {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     opacity: 0;
     animation: fadeIn 1.5s forwards;
     animation-delay: 0.5s;
 }
 
 .profile-img-container {
-    width: 300px;
-    height: 300px;
+    width: 80%;
+    max-width: 300px;
+    height: auto;
     border-radius: 50%;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .profile-img {
@@ -30,8 +33,9 @@
 }
 
 .profile-text {
-    max-width: 600px;
-    margin-left: 20px;
+    text-align: center;
+    max-width: 80%;
+    margin-left: 0;
 }
 
 .profile-text h1 {
@@ -131,6 +135,7 @@
         transform: translateY(0);
     }
 }
+
 .cv-btn {
     display: inline-block;
     padding: 10px 20px;
@@ -146,6 +151,84 @@
 
 .cv-btn:hover {
     background-color: #1326ce;
+}
+
+/* Media Queries */
+
+/* Small screens (mobile) */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-img-container {
+        width: 60%;
+        max-width: 200px;
+    }
+
+    .profile-text h1 {
+        font-size: 2rem;
+    }
+
+    .profile-text p {
+        font-size: 1rem;
+    }
+
+    .contact-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-section ul li {
+        font-size: 1rem;
+    }
+
+    .skills-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-img-container {
+        width: 70%;
+        max-width: 250px;
+    }
+
+    .profile-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .profile-text p {
+        font-size: 1.05rem;
+    }
+
+    .contact-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-section ul li {
+        font-size: 1.1rem;
+    }
+
+    .skills-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cv-btn {
+        font-size: 15px;
+        padding: 9px 18px;
+    }
 }
 
 

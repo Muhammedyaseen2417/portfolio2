@@ -41,7 +41,7 @@ body {
     margin-bottom: 1rem;
 }
 
-
+/* Hero Text */
 .hero-text h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -52,15 +52,16 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* .cta .cta-button {
+/* CTA Button */
+.cta .cta-button {
     padding: 0.75rem 1.5rem;
-    background-color: #fff;
+    /* background-color: #fff; */
     color: #007BFF;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: transform 0.3s ease, background-color 0.3s ease;
-} */
+}
 
 .cta .cta-button:hover {
     background-color: #e6e6e6;
@@ -162,15 +163,89 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .highlight-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .profile-pic {
+        width: 350px;
+        height: 350px;
+    }
+}
+
 @media (max-width: 768px) {
+    .hero-section {
+        padding: 3rem 1rem;
+    }
+
     .hero-text h1 {
         font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+
+    .highlight-section {
+        padding: 3rem 1rem;
     }
 
     .highlight-content h2 {
         font-size: 2rem;
     }
+
+    .highlight-content p {
+        font-size: 1.1rem;
+    }
+
+    .profile-pic {
+        width: 300px;
+        height: 300px;
+    }
 }
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 2rem 1rem;
+        min-height: auto;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .highlight-section {
+        padding: 2rem 1rem;
+    }
+
+    .highlight-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .highlight-content p {
+        font-size: 1rem;
+    }
+
+    .profile-pic {
+        width: 250px;
+        height: 250px;
+    }
+
+    .cta .cta-button {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
 
 
 
